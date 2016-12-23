@@ -1,0 +1,35 @@
+<h1>Welcome to the registration page</h1>
+<p>Required fields are marked with an asterisk</p>
+
+<form action='/register_users/register' method='post'>
+  First: <input type='text' name='first_name' /><br />
+    <% if !flash[:first_name].nil? %><span class='flash'><%= flash[:first_name] %></span><br /><% end %>
+
+  Last: <input type='text' name='last_name' /><br />
+    <% if !flash[:last_name].nil? %><span class='flash'><%= flash[:last_name] %></span><br /><% end %>
+
+  Email: <input type='email' name='email' /><br />
+    <% if !flash[:email].nil? %><span class='flash'><%= flash[:email] %></span><br /><% end %>
+
+  Address:<br/>
+
+  Street: <input type='text' name='street' id='register_street'/><br />
+    <% if !flash[:street].nil? %><span class='flash'><%= flash[:street] %></span><br /><% end %>
+
+  City: <input type='text' name='city' />
+    <% if !flash[:city].nil? %><span class='flash'><%= flash[:city] %></span><br /><% end %>
+
+  State: <input type='text' name='state' />
+    <% if !flash[:state].nil? %><span class='flash'><%= flash[:state] %></span><br /><% end %>
+
+  Zip: <input type='text' name='zip' /><br />
+    <% if !flash[:zip].nil? %><span class='flash'><%= flash[:zip] %></span><br /><% end %>
+
+  Username: <input type='text' name='username' /><br />
+    <% if !flash[:username].nil? %><span class='flash'><%= flash[:username] %></span><br /><% end %>
+
+  Password: <input type='text' name='password' /><br />
+    <% if !flash[:password].nil? %><span class='flash'><%= flash[:password] %></span><br /><% end %>
+
+  <input type='submit' value='Register' />
+</form>

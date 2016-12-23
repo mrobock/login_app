@@ -1,0 +1,32 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#login_form {
+  margin-left: 100px;
+}
+
+#register_street {
+  width: 25%;
+}
+
+.flash {
+  color: red;
+  size: 60%;
+  font-style: italic;
+}
+
+h1 {
+  margin-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.h1_child {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+p {
+  margin-left: 5px
+}

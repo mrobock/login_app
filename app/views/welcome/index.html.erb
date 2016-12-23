@@ -1,0 +1,10 @@
+<h1>Welcome to the Log In App</h1>
+<p class='h1_child'>Please Log In or Register Below</p>
+
+<%= flash[:welcome_status] %>
+<form action='/welcome/login' method='get' id=login_form>
+  Username: <input type='text' name='username' placeholder='Username' /><br />
+  Pass:    <input type='password' name='password' placeholder='******' /><br />
+  <input type='submit' value='Log In'>
+</form><br />
+<p>No username? <a href='/register_users/index'><button type='button'>Register Here</button></a>
