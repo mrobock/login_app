@@ -1,8 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    if cookies[:user] == User.find_by(username: cookies[:user])
-      redirect_to '/users/index'
-    end
+    redirect_to '/users/index' if User.find_by(username: cookies[:user])
   end
 
   def login

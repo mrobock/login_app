@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post '/register_users/register'
   get '/register_users/register'
 
-  get '/users/update_profile'
+  get '/users/profile'
 
   get '/users/address_book'
 
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/welcome/register'
 
   get '/users/index'
+
+  get '/logout' => 'users#logout'
 
   root 'welcome#index'
 

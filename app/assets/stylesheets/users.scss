@@ -1,3 +1,31 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#profile_view {
+  width: 300px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
+
+.flex_box {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex_row {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.flex_item {
+  flex-grow: 1;
+}
+
+#flex_test {
+  width: 50px;
+  height: auto;
+  background-color: green;
+}
