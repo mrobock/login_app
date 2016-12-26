@@ -1,14 +1,18 @@
 <h1>You have successfully logged in!</h1>
 
 <nav><a href='/users/profile'><button>Profile</button></a></nav>
+<div id="contacts">
+</div>
+
+
 
 <div class="flex_box">
-  <table>
+  <table id="profile_table">
     <thead class='flex_row'>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Address</th>
-      <th>Email</th>
+      <th class='flex_item'>First Name</th>
+      <th class='flex_item'>Last Name</th>
+      <th class='flex_item'>Address</th>
+      <th class='flex_item'>Email</th>
     </thead>
     <% if !@contacts.nil? %>
     <% @contacts.each do |a| %>

@@ -11,17 +11,21 @@
 }
 
 .flex_box {
-  display: flex;
-  flex-direction: column-reverse;
+  width: 100%;
+  border: 1px solid black
 }
 
-.flex_row {
-  justify-content: space-around;
+#profile_table {
   width: 100%;
 }
 
+.flex_row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .flex_item {
-  flex-grow: 1;
+  flex-direction: row;
 }
 
 #flex_test {

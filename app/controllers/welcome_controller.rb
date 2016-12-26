@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
   def login
     if !params[:username].nil? && !params[:password].nil? && !params[:username].empty? && !params[:password].empty?
       @user = User.find_by(username: params[:username])
-      if (@user.password == params[:password])
+      if (@user && @user.password == params[:password])
         cookies[:user] = @user.username
         redirect_to '/users/index'
       else
