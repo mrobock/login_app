@@ -1,29 +1,52 @@
 <h1>You have successfully logged in!</h1>
 
-<nav><a href='/users/profile'><button>Profile</button></a></nav>
-<div id="contacts">
+<div class="login_theme">
+  <div class="user_profile_button">
+    <a href='/users/profile'><button>Profile</button></a>
+  </div>
+
+  <div class="add_contact">
+    <form action='user/update' method='post' class='add_contact_row'>
+      First: <input type='text' name='first_name' class='add_contact_item' />
+        <% if !flash[:first_name].nil? %><span class='flash'><%= flash[:first_name] %></span><br /><% end %>
+
+      Last: <input type='text' name='last_name' class='add_contact_item' />
+        <% if !flash[:last_name].nil? %><span class='flash'><%= flash[:last_name] %></span><br /><% end %>
+
+      Address: <input type='text' name='address' class='add_contact_item' />
+          <% if !flash[:address].nil? %><span class='flash'><%= flash[:address] %></span><br /><% end %>
+
+      Email: <input type='email' name='email' class='add_contact_item' />
+        <% if !flash[:email].nil? %><span class='flash'><%= flash[:email] %></span><br /><% end %>
+      <input type='submit' value="Add Contact" />
+    </form>
+  </div>
 </div>
 
 
 
 <div class="flex_box">
-  <table id="profile_table">
-    <thead class='flex_row'>
-      <th class='flex_item'>First Name</th>
-      <th class='flex_item'>Last Name</th>
-      <th class='flex_item'>Address</th>
-      <th class='flex_item'>Email</th>
+  <table class="profile_table">
+    <thead>
+      <tr class='flex_row'>
+        <th class='flex_item'>First Name</th>
+        <th class='flex_item'>Last Name</th>
+        <th class='flex_item'>Address</th>
+        <th class='flex_item'>Email</th>
+      </tr>
     </thead>
-    <% if !@contacts.nil? %>
-    <% @contacts.each do |a| %>
-    <tr class='flex_row'>
-      <td class='flex_item'><%= a.first_name %></td>
-      <td class='flex_item'><%= a.last_name %></td>
-      <td class='flex_item'><%= a.address %></td>
-      <td class='flex_item'><%= a.email %></td>
-      <td class='flex_item' id='flex_test'></td>
-    </tr>
-    <% end %>
-    <% end %>
+    <tbody>
+      <% if !@contacts.nil? %>
+      <% @contacts.each do |a| %>
+      <tr class='flex_row'>
+        <td class='flex_item'><%= a.first_name %></td>
+        <td class='flex_item'><%= a.last_name %></td>
+        <td class='flex_item'><%= a.address %></td>
+        <td class='flex_item'><%= a.email %></td>
+        <!-- <td class='flex_item flex_test'></td> -->
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
   </table>
 </div>

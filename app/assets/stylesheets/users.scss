@@ -10,26 +10,53 @@
   flex-flow: row wrap;
 }
 
-.flex_box {
-  width: 100%;
-  border: 1px solid black
+.login_theme {
+  width: 90%;
+  margin-left: 5%;
 }
 
-#profile_table {
-  width: 100%;
+.add_contact {
+  margin-bottom: 2%;
+
+}
+
+.add_contact_row {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.add_contact_item {
+
+}
+
+.profile_table {
+  margin-left: 5%;
+  width: 90%;
+  border-collapse: collapse;
 }
 
 .flex_row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+
 }
 
 .flex_item {
-  flex-direction: row;
+  border: 1px solid black;
+  width: 25%;
+  padding-left: 5px;
 }
 
-#flex_test {
+.flex_test {
   width: 50px;
   height: auto;
   background-color: green;
+}
+
+.user_profile_button {
+  background-color: auto;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
