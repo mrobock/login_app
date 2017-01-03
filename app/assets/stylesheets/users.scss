@@ -3,11 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #profile_view {
-  width: 300px;
-  height: 20px;
+  margin-top: 1em;
+  font-size: 1.25em;
+  width: 50em;
+  height: 15em;
   display: flex;
   flex-direction: column;
-  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#profile_city {
+  word-spacing:5em;
+}
+#profile_state {
+  word-spacing: 3em;
+}
+#profile_zip {
+  word-spacing: 1em;
+}
+
+.profile_item {
+  border: 1px solid black;
 }
 
 .login_theme {
@@ -17,12 +33,12 @@
 
 .add_contact {
   margin-bottom: 2%;
-
+  width: 90%;
 }
 
 .add_contact_row {
   display: flex;
-  width: 90%;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 
@@ -59,4 +75,8 @@
   background-color: auto;
   margin-top: 1%;
   margin-bottom: 2%;
+}
+
+.red {
+  background-color: rgba(255,10,10,.6);
 }

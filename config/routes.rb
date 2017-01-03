@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post '/contacts/add_contact'
+
   get '/register_users/index'
 
   post '/register_users/register'

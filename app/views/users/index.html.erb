@@ -6,7 +6,7 @@
   </div>
 
   <div class="add_contact">
-    <form action='user/update' method='post' class='add_contact_row'>
+    <form action='/contacts/add_contact' method='post' class='add_contact_row'>
       First: <input type='text' name='first_name' class='add_contact_item' />
         <% if !flash[:first_name].nil? %><span class='flash'><%= flash[:first_name] %></span><br /><% end %>
 
@@ -38,7 +38,7 @@
     <tbody>
       <% if !@contacts.nil? %>
       <% @contacts.each do |a| %>
-      <tr class='flex_row'>
+      <tr class='flex_row' id="<%=a.id%>">
         <td class='flex_item'><%= a.first_name %></td>
         <td class='flex_item'><%= a.last_name %></td>
         <td class='flex_item'><%= a.address %></td>

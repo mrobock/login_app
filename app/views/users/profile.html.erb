@@ -1,10 +1,10 @@
-<h1>Users#update_profile</h1>
+<h1><%= @user.first_name %>'s Profile</h1>
 
 <div id='profile_view'>
-<p>First Name: <%= @user.first_name %></p>
-<p>Last Name: <%= @user.last_name %></p>
-<p>Street: <%= @user.street %></p>
-<p>City: <%= @user.city %> State: <%= @user.state %> Zip:<%= @user.zip %></p>
-<p>Username:<%= @user.username %></p>
-<p>Password:<%= @user.password %></p>
+  <span class='profile_item'>First Name: <%= @user.first_name %></span>
+  <span class='profile_item'>Last Name: <%= @user.last_name %></span>
+  <span class='profile_item'>Street: <%= @user.street %></span>
+  <span class='profile_item'><span id='profile_city'>City:<%= @user.city %></span><span id='profile_state'> State:<%= @user.state %> </span><span id='profile_zip'>Zip:<%= @user.zip %></span></span>
+  <span class='profile_item'>Username: <%= @user.username %></span>
+  <span class='profile_item'>Password: <%= @user.password %></span>
 </div>

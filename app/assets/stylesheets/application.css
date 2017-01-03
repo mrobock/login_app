@@ -12,6 +12,40 @@
  *
  *= require_tree .
  *= require_self
- *= require_welcome
- *= require_users
+ *= require welcome
+ *= require users
  */
+
+body {
+  background-color: rgba(200,200,200,.4);
+}
+
+nav {
+  background-color: rgba(100,100,100,.8);
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -8px -8px 0px -8px;
+}
+
+nav a {
+  padding:.5em;
+  text-decoration: none;
+  font-size: 1.15em;
+  color: rgba(72, 68, 68,.8);
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: rgba(100,100,100,1);
+}
+
+nav a:visited {
+  color: rgba(72, 68, 79,.8);
+}
+
+nav a:last-of-type {
+  margin-right: 1em;
+}
